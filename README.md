@@ -29,7 +29,8 @@ To make the app a little more interesting, I gave it a space-theme along with a 
 1. Clone the repository
 2. Cd in the root directory
 3. Run `yarn install`
-4. Enjoy ;)
+4. Run `yarn start`
+5. Enjoy ;)
 
 > I will eventually distribute this as a native app so that you can download it and add it to your applications folder.
 
