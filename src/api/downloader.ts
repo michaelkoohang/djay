@@ -1,5 +1,4 @@
 import ytdl from 'ytdl-core';
-import ffmpegPath from '@ffmpeg-installer/ffmpeg'
 import ffmpeg from 'fluent-ffmpeg';
 import path from 'path';
 import os from 'os';
@@ -30,8 +29,7 @@ export const downloadAudio = (
       });
     })
     .then(audio => {
-      console.log(path.resolve('Downloads', `${videoInfo.title}.mp3`))
-      ffmpeg.setFfmpegPath(ffmpegPath.path);
+      ffmpeg.setFfmpegPath(path.resolve(__dirname, '../../../ffmpeg'));
       ffmpeg(audio)
         .audioBitrate(128)
         .save(path.resolve(os.homedir() + '/Downloads/', `${videoInfo.title}.mp3`));
